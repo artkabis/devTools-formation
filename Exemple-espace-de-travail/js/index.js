@@ -1,6 +1,6 @@
 
     //Iitialisation de highlightjs
-    //hljs.highlightAll();
+    hljs.highlightAll();
 (function ($) {
     //console.log("index.js loaded");
     
