@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css" integrity="sha512-3xLMEigMNYLDJLAgaGlDSxpGykyb+nQnJBzbkQy2a0gyVKL2ZpNOPIj1rD8IPFaJbwAgId/atho1+LBpWu5DhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/a11y-dark.min.css" integrity="sha512-Vj6gPCk8EZlqnoveEyuGyYaWZ1+jyjMPg8g4shwyyNlRQl6d3L9At02ZHQr5K6s5duZl/+YKMnM3/8pDhoUphg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="shortcut icon" href="images/favicon_solocal_32x32_0.png" type="image/png" />
+    <title>Workspace Chrome</title>
+</head>
+<body>
+    <main>
+        <h1 class="monH1">Workspace et devTools Chrome - découverte</h1>
+        <h2>Vous pouvez gérer un projet depuis le workspace de Google Chrome et ce, via le devTools</h2>
+        <img src="./images/workspace-sources.PNG">
+        <br>
+        <br>
+        <p>Avant tout chose, si vous souhaitez accèder au projet de cette formation, vous pouvez le faire <a href="https://github.com/artkabis/Formations/tree/master/DevTools%20Chrome/Exemple-espace%20de%20travail">ici</a>. 
+        Une fois déposé, vous avez accès à votre dossier de travail et vous pouvez soit : </p>
+        <ol>
+            <li>Ouvrir votre fihcier HTML principal depuis votre dossier physique (disque dur)</li>
+            <li>Utiliser une extension chrome comme <a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb/related">Web Server for Chrome</a>
+        </ol>
+        <div class="container row">
+            <div class="col-2"><img class="mxh-150" src="images/lien-physique.PNG"></div>
+            <div class="col-2"><img class="mxh-150" src="images/localhost.PNG"></div>
+        </div>
+        <br>
+        <p>Nous allons utiliser le second choix afin d'avoir un accès plus intuitif à notre projet.</p>
+        <p>Une fois dans votre projet, il est tout à fait possible d'éditer vos fichiers JavaScript, CSS et HTML tout en visionnant vos modifications depuis le navigateur. Vous devrez simplement sauvegarder vos fichiers et actualiser devTools avec F5.
+        
+        <h2>Voici par exemple un simple bouton qui possède un design intégré depuis une feuille de style distante ainsi que des fonctionnalités js</h2>
+        <div class="container-interaction"></div>
+        <div class="separator"></div>
+
+        <div class="container box">
+         <h3>Afin d'ajouter un cadre d'apprentissage, nous allons étudier l'utilisation des shadow DOM components au sein de ce cours</h3>
+         <h4>Mais qu'est-ce qu'un shadow DOM Component (ou api Shadow DOM) ?</h4>
+         <cite>Un aspect important des composants web est l'encapsulation — être capable de garder la structure de balisage, le style et le comportement cachés et séparés du reste de code de la page tel que différentes parties n'entrent pas en conflit et que le code puisse rester agréable et propre. L'API Shadow DOM est un moyen d'y parvenir, fournissant une manière d'associer à un élément un DOM séparé et caché. Un bon exemple pourrait être le bouton "follow me" de Twitter qui embarque un composant qui est isolé du DOM principal et qui ne prend donc aucun style et intreraction de son DOM parent, d'ailleurs sans DOM parent il ne peut y avoir de DOM shadow, celui-ci utilise ce premier afin de s'y incorporer. </cite>
+         <br>
+         <p>Nous allons créer notre premier Shadow DOM Component, celui-ci restera basique et aura simplment un but pédagogique.<p>
+         <p>Ce composant est construit à partir du fichier ShadowComponent.js et il possède des propriétés bien définis : </p>
+         <ol>
+            <li>Le composant est élément qui étend HTMLElement</li>
+            <li>Il possède bien évidement un constructeur qui lui permettra par la suite de pouvoir l'utiliser via son propre scope, en l'occurence "this._root"</li>
+            <li>Il possède aussi une méthode d'attachement qui prend deux paramètres possible : "this.attachShadow" pouvant être ouvert (open), ce qui lui permettra de créer un pont avec le DOM qui l'accueil en son sein et fermer (closed), qui lui permet d'être isolé du DOM parent.</li>
+            <li>Il a donc la capacité a être isolé et de ne pas subir le comportement (styles CSS et script js) utilisé depuis le DOM parent</li>
+         </ol>
+         <br><br>
+         <p>Notre premier composant est un simple "DOM Shadow component", il possède son propre modèle composé de : CSS et HTML et Javascript. Le second reprend le composant "star" de github généré depuis <a href="https://buttons.github.io/">https://buttons.github.io/</a>. Le troisème est un peu plus complexe et permet d'afficher du contenu en fonction du token entré dans le text input</p>
+         
+         <div class="container-component row"></div>
+
+        </div>
+        <div class="separator"></div>
+    
+        <h3> Allons plus loin ...</h3>
+
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js" integrity="sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+     <script src="./js/StarGithub.js"></script>
+    <script src="./js/ShadowComponent.js"></script>
+    <script src="./js/PopupInfo.js"></script>
+    <script src="./js/ConditionalBreakpoint.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

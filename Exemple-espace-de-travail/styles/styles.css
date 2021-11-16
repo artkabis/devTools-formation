@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+body{
+    margin:50px 0;
+    font-display: auto;
+    background:#333;
+    color:white;
+}
+h1, h2, h3{
+    text-align:center;
+}
+main{
+    max-width:90vw;
+    margin: 0 5vw;
+}
+
+main a{
+    color:#03A9F4;
+    text-decoration:none;
+}
+.container-interaction{
+    display:flex;
+    align-items:center;
+    margin-top:30px;
+}
+#interactionZone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 75px;
+    background: #03A9F4;
+    position: relative;
+    margin: 0 auto;;
+    top: 75px;
+    padding: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 15px 0px 0px #0086c3, 0px 0px 20px 0px rgb(0 0 0 / 40%);
+    transition: all 0.2s;
+}
+
+#interactionZone:active {
+    top: 79px;
+    box-shadow: 0px 7px 0px 0px #0086c3;
+}
+#interactionZone .txtButton {
+    font-family: "Fira Sans";
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.row{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 100%;
+}
+.row.col {
+    flex-direction: column;
+}
+.container-component.row {
+    justify-content: space-around;
+    align-items:center;
+    flex-direction:column;
+}
+.flex-center-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.container-interaction {
+    display: inline-block;
+    min-height: 240px;
+    width: 100%;
+}
+.separator {
+    width: 75%;
+    height: 3px;
+    border-top: solid 1.5px #03a9f4;
+    border-bottom: solid 1.5px #03a9f4;
+    border-left: solid 200px transparent;
+    border-right: solid 200px transparent;
+    margin: 30px 0 30px 0;
+}
+.col-2{
+    float:left;
+    width:50%
+}
+.mxh-150{
+    max-height:350px;
+    width:auto;
+}
+#tokenContent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    z-index: 20;
+    background: rgb(0 0 0 / 93%);
+    padding: 50px;
+    transform: translate(-50%,-50%);
+}
+
+.container.box{
+    position:relative;
+    background: rgb(0 0 0 / 30%);
+    padding: 50px;
+    box-shadow: 0 0 60px rgb(0 0 0 /50%);
+    margin:30px;
+}
+.row.evenly {
+    justify-content: space-evenly;
+}
+.row div[class^="node"] {
+    max-width: 302px;
+    width: 200px;
+    padding: 10px;
+    background: #00bcd4;
+    margin: 0 0 1px 0;
+
+}
+.row.col.left {
+    align-items: flex-start;
+}
