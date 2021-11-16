@@ -100,7 +100,7 @@ const newStructure = `
    const popupInfoComponent = `             
    <form>
       <div class="containerToken">
-        <label for="token">Entrez votre token : <popup-info img="./images/alt.png" text="Pour accèder au contenu suivant vous devez entrez votre token (possèdant 6 chiffres)"></label>
+        <label for="token">Entrez votre token : <popup-info img="./images/alt.png" text="Pour accèder au contenu suivant vous devez entrez votre token (possèdant 5 chiffres) : 16000 par exemple"></label>
         <input type="text" id="token">
       </div>
     </form>`;
@@ -110,7 +110,7 @@ const newStructure = `
     $('main .container-component').append(popupInfoComponent);
     $('#token').on('input',function(e){
         console.log($(this).val())
-        if($(this).val() === '666666'){
+        if($(this).val() === '16000'){
              $('main .containerToken').append(contentTokenDisabled);
              console.info("Vous venez de trouver le bon token !!!");
              $('.containerToken #tokenContent').delay(2000).fadeOut(500,function(){$(this).remove()});//Une fois le composant affiché, nous attendons 2 secondes avant de le faire disparaitre (en 500 ms) et le supprimons du DOM
